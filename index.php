@@ -1,6 +1,11 @@
 <?php
     require 'header.php';
-    require 'oeuvres.php';
+    //require 'oeuvres.php'; fichier inutile car connexion à database artbox contenant les infos des oeuvres
+    require 'bdd.php'; //fichier de connexion à la database artbox 
+
+    $bdd = connexion();
+    $oeuvres = $bdd->query('SELECT * FROM oeuvres'); //$oeuvres array qui récupère les infos de la table oeuvre de la database artbox
+    //????query() n'exite pas dans la documentation php
 ?>
 <div id="liste-oeuvres">
     <?php foreach($oeuvres as $oeuvre): ?>
