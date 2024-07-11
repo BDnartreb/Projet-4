@@ -1,5 +1,8 @@
-<?php require 'header.php'; ?>
-
+<?php
+    require 'header.php';
+    require 'traitement.php';
+?>
+    
 <form action="traitement.php" method="POST">
     <div class="champ-formulaire">
         <label for="titre">Titre de l'œuvre</label>
@@ -22,3 +25,4 @@
 </form>
 
 <?php require 'footer.php'; ?>
+
