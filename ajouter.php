@@ -1,6 +1,9 @@
 <?php
     require 'header.php';
-    require 'traitement.php';
+    if (isset($_GET['erreur'])){
+        //var_dump($_GET['erreur']);// affiche le message erreur
+        echo 'Attention à bien remplir tous les champs';
+    }
 ?>
     
 <form action="traitement.php" method="POST">
